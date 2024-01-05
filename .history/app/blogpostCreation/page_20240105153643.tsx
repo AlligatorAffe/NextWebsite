@@ -1,12 +1,19 @@
 'use client'
 
 import { title } from "process"
-import React, {useState, useEffect } from "react"
+import React, {useState, useEffect, SyntheticEvent } from "react"
 import { collection, addDoc } from 'firebase/firestore'
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 
 export default function Page(){
+
+  const handleReset = () => {
+    // Navigate to the desired page using the router
+      console.log("i clicked blogpost")
+    
+  }
   const[articleData, setArticleData] = useState([
     { articleId:1,
       userImage:"https://tailwindcss.com/img/jonathan.jpg",
@@ -35,10 +42,11 @@ export default function Page(){
     title:"",
     textBody:"",
     textBodyImage:"",
+    textAuthor:"",
   })
 //Add item to database
 
-  const addItem = async (e) => {
+  const addItem = async (e: SyntheticEvent) => {
     e.preventDefault()
   } 
 
@@ -52,39 +60,67 @@ export default function Page(){
 
   return (
     <div className="max-w-screen-xl mx-auto p-16">
-      <div  className="text-center">
-        <p className="text-green-600">********If logged in*********</p>
-        <p className="text-sky-600 font-bold"><Link href="/blogpostCreation">Create New Post</Link></p>
-      </div>
-
       <div className="sm:grid lg:grid-cols-3 sm:grid-cols-2 gap-10">
-        {articleData.map((article) => (
-          <div
-            key={article.articleId}
-            className="hover:bg-gray-900 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg"
-          >
-            <div className="py-4 px-8">
-              <img
-                src={article.userImage}
-                className="rounded-full h-12 w-12 mb-4"
-              />
-              <a href="#">
-                <h4 className="text-lg mb-3 font-semibold">{article.title}</h4>
-              </a>
-              <p className="mb-2 text-sm text-gray-600">{article.textBody}</p>
 
-              <img
-                src={article.textBodyImage}
-                className="w-100"
-              />
-              <hr className="mt-4" />
-              <span className="text-xs">ARTICLE</span>
-              &nbsp;<span className="text-xs text-gray-500">
-                {article.articleId}
-              </span>
-            </div>
-          </div>
-        ))}
+    </div>
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+      <div className="text-white relative px-4 py-10 bg-indigo-400 shadow-lg sm:rounded-3xl sm:p-20">
+        <div className="text-center pb-6">
+          <h1 className="text-3xl">Contact Us!</h1>
+          <p className="text-gray-300">Fill up the form below to send us a message.</p>
+        </div>
+
+        <form>
+  <input
+    className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    type="text"
+    placeholder="Name"
+    name="name"
+    value={newArticle.textAuthor}
+
+  />
+
+  <input
+    className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    type="file"
+    placeholder="image"
+    name="filename"
+    value={newArticle.textBodyImage}
+  />
+
+  <input
+    className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    type="text"
+    placeholder="Subject"
+    name="_subject"
+    value={newArticle.title}
+  />
+
+  <textarea
+    className="shadow mb-4 min-h-0 appearance-none border rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    placeholder="Type your message here..."
+    name="message"
+    style={{ height: "121px" }}
+    value={newArticle.textBody}
+  ></textarea>
+
+  <div className="flex justify-between">
+    <button
+      className="shadow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      type="submit"
+      value="Send ➤"
+      onClick={addItem}
+    > 
+      Send
+    </button>
+    <Link href ="/blogpost"  className="shadow bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+      Cancel
+    </Link>
+
+  </div>
+</form>
+      </div>
     </div>
   </div>
     

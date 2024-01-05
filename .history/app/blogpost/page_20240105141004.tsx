@@ -53,7 +53,7 @@ export default function Page(){
   return (
     <div className="max-w-screen-xl mx-auto p-16">
       <div  className="text-center">
-        <p className="text-green-600">********If logged in*********</p>
+        <p>********If logged in*********</p>
         <p className="text-sky-600 font-bold"><Link href="/blogpostCreation">Create New Post</Link></p>
       </div>
 
