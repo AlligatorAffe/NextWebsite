@@ -2,7 +2,7 @@
 
 import { title } from "process"
 import React, {useState, useEffect } from "react"
-import { collection, addDoc } from 'firebase/firestore'
+
 
 
 
@@ -39,8 +39,8 @@ export default function Page(){
 
 
 
-  return (
-    <div className="max-w-screen-xl mx-auto p-16">
+    return (
+      <div className="max-w-screen-xl mx-auto p-16">
       <div className="sm:grid lg:grid-cols-3 sm:grid-cols-2 gap-10">
         {articleData.map((article) => (
           <div
@@ -69,7 +69,8 @@ export default function Page(){
             </div>
           </div>
         ))}
+
+        </div>
     </div>
-  </div>
-  )
+    )
 }
