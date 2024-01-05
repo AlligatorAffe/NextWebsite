@@ -42,7 +42,7 @@ export default function Page(){
     userImage:"",
     title:"",
     textBody:"",
-    //textBodyImage:"",
+    textBodyImage:"",
     textAuthor:"",
   })
 //Add item to database
@@ -57,7 +57,7 @@ const addItem = async (e: SyntheticEvent) => {
       userImage: "/app/randomShit/katt.jpg",
       title: newArticle.title,
       textBody: newArticle.textBody,
-      //textBodyImage: newArticle.textBodyImage,
+      textBodyImage: newArticle.textBodyImage,
       textAuthor: newArticle.textAuthor,
     });
     console.log("clicked på send");
@@ -101,8 +101,8 @@ const addItem = async (e: SyntheticEvent) => {
     type="file"
     placeholder="image"
     name="filename"
-    //value={newArticle.textBodyImage}
-    //onChange={(e) => setNewArticle({...newArticle,textBodyImage: e.target.value})}
+    value={newArticle.textBodyImage}
+    onChange={(e) => setNewArticle({...newArticle,textBodyImage: e.target.value})}
   />
 
   <input
@@ -127,7 +127,8 @@ const addItem = async (e: SyntheticEvent) => {
     <button
       className="shadow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       type="submit"
-      onSubmit={addItem}
+      value="Send ➤"
+      onClick={addItem}
     > 
       Send
     </button>

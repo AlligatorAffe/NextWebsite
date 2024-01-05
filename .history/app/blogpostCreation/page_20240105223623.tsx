@@ -42,7 +42,7 @@ export default function Page(){
     userImage:"",
     title:"",
     textBody:"",
-    //textBodyImage:"",
+    textBodyImage:"",
     textAuthor:"",
   })
 //Add item to database
@@ -57,7 +57,7 @@ const addItem = async (e: SyntheticEvent) => {
       userImage: "/app/randomShit/katt.jpg",
       title: newArticle.title,
       textBody: newArticle.textBody,
-      //textBodyImage: newArticle.textBodyImage,
+      textBodyImage: newArticle.textBodyImage,
       textAuthor: newArticle.textAuthor,
     });
     console.log("clicked på send");
@@ -101,8 +101,8 @@ const addItem = async (e: SyntheticEvent) => {
     type="file"
     placeholder="image"
     name="filename"
-    //value={newArticle.textBodyImage}
-    //onChange={(e) => setNewArticle({...newArticle,textBodyImage: e.target.value})}
+    value={newArticle.textBodyImage}
+    onChange={(e) => setNewArticle({...newArticle,textBodyImage: e.target.value})}
   />
 
   <input
