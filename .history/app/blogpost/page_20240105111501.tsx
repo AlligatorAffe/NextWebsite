@@ -12,7 +12,7 @@ export default function Page(){
                         <h4 className="text-lg mb-3 font-semibold">How to be effective at working remotely?</h4>
                     </a>
                     <p className="mb-2 text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the  standard dummy text ever since the 1500s</p>
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 
                     <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" className="w-100"/>
 
@@ -30,7 +30,7 @@ export default function Page(){
                         <h4 className="text-lg mb-3 font-semibold">How to be effective at working remotely?</h4>
                     </a>
                     <p className="mb-2 text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the  standard dummy text ever since the 1500s</p>
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 
                     <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" className="w-100"/>
 
@@ -48,7 +48,7 @@ export default function Page(){
                         <h4 className="text-lg mb-3 font-semibold">How to be effective at working remotely?</h4>
                     </a>
                     <p className="mb-2 text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the standard dummy text ever since the 1500s  </p>
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s  </p>
 
                     <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" className="w-100"/>
 

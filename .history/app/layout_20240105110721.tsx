@@ -61,6 +61,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen bg-zinc-100 text-black">
         <div className="flex-grow">
           <Header title="My webpage Bro"/>
+          
           <nav className="bg-white p-3">
             <ul className="flex space-x-4">
               {navLinks.map((link, index) => (

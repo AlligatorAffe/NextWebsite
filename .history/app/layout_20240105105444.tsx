@@ -2,8 +2,6 @@ import './globals.css'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Footer from '../app/components/footer'
-import { title } from 'process'
-import Header from '../app/components/header'
 
 
 
@@ -60,7 +58,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col min-h-screen bg-zinc-100 text-black">
         <div className="flex-grow">
-          <Header title="My webpage Bro"/>
+          <header className="bg-amber-300 p-8">
+            <h1 className="text-2xl font-bold text-white">Min Header</h1>
+          </header>
+          
           <nav className="bg-white p-3">
             <ul className="flex space-x-4">
               {navLinks.map((link, index) => (
@@ -79,10 +80,9 @@ export default function RootLayout({
           </div>
           
         </div>
-          <Footer title="Alfred Olsson" />
+                <Footer children>Alfred Olsson</Footer>
       </body>
     </html>
 
   )
 }
-
