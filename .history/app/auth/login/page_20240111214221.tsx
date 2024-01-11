@@ -9,6 +9,7 @@ export default function Page() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleLogin = async(e: SyntheticEvent) => {
+    "use server"
     e.preventDefault();
     //fetchLogin();
     

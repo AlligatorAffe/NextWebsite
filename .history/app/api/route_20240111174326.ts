@@ -3,18 +3,16 @@ import React from "react"
 
 
 
-import { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    res.status(200).json({ message: 'GET request successful' });
-  } else if (req.method === 'POST') {
-    res.status(200).json({ message: 'POST request successful' });
-  } else {
-    res.status(405).json({ message: 'Method Not Allowed' });
+export default function handler(req, res) {
+    if (req.method === 'GET') {
+      res.status(200).json({ message: 'GET request successful' });
+    } else if (req.method === 'POST') {
+      res.status(200).json({ message: 'POST request successful' });
+    } else {
+      res.status(405).json({ message: 'Method Not Allowed' });
+    }
   }
-}
-
 /*
 export async function GET(request: Request){
     const { searchParams } = new URL(request.url)

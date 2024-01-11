@@ -10,8 +10,7 @@ export default function Page() {
   const [password, setPassword] = useState('');
   const handleLogin = async(e: SyntheticEvent) => {
     e.preventDefault();
-    //fetchLogin();
-    
+    /*
   
     try{
       const response = await fetch('/api/login', {
@@ -31,7 +30,7 @@ export default function Page() {
     } catch(error){
       console.error('An error during login',error);
     }
-    
+    */
     //API ANROP HÄR!!!!
     
     
