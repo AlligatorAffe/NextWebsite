@@ -40,7 +40,7 @@ export default function Page() {
       <div className="py-28">
         <div className="w-full max-w-xs m-auto bg-indigo-100 rounded p-5">   
         <header>
-          <img className="w-20 mx-auto mb-5" src="https://img.icons8.com/fluent/344/year-of-tiger.png" />
+         
         </header>   
         <form onSubmit={handleLogin}>
           <div>

@@ -1,7 +1,7 @@
 "use client"
 import { SyntheticEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-
+import röv from ""
 
 
 export default function Page() {
@@ -14,7 +14,7 @@ export default function Page() {
     
   
     try{
-      const response = await fetch('/api/checkLogin', {
+      const response = await fetch('../../api/login', {
         method: 'POST',
         headers:{
           'Content-Type' : 'application/json',

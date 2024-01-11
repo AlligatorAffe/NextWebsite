@@ -14,7 +14,7 @@ export default function Page() {
     
   
     try{
-      const response = await fetch('/api/checkLogin', {
+      const response = await fetch('../../api/checkLogin', {
         method: 'POST',
         headers:{
           'Content-Type' : 'application/json',
